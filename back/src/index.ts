@@ -164,7 +164,7 @@ app.post('/users/register', async (req:Request, res:Response) => {
 })
 
 //Fazer login de um usuário
-app.get('/users/login', async (req:Request, res:Response) => {
+app.post('/users/login', async (req:Request, res:Response) => {
   const { user, pass } = req.body
 
   try {

@@ -5,7 +5,7 @@ export async function POST(req: Request) {
   const body = await req.json();
 
   try {
-    const { data } = await api.get("/users/login", { data: body });
+    const { data } = await api.post("/users/login", body );
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error, status: 500 });
